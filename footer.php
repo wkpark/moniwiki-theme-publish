@@ -24,7 +24,7 @@
                             ?>
                     </div>
                     <div class="moni">
-                        Theme Publish by <a href="http://kovshenin.com/" rel="designer">Konstantin Kovshenin</a> Converted by <a href="http://haruair.com/" target="_blank">Haruair</a><div><a target="_blank" href="http://moniwiki.sourceforge.net/" rel="generator"><img src="<?php echo $this->themeurl;?>/imgs/moniwiki-powered-thin.png" alt="Powered By MoniWiki" /></a></div>
+                        Theme Publish by <a href="http://kovshenin.com/" rel="designer">Konstantin Kovshenin</a> Converted by <a href="http://haruair.com/" target="_blank">Haruair</a><div><a target="_blank" href="http://moniwiki.sourceforge.net/" rel="generator"><img src="<?php echo $self->themeurl;?>/imgs/moniwiki-powered-thin.png" alt="Powered By MoniWiki" /></a></div>
                         
                     </div>
                 </footer>
@@ -54,6 +54,6 @@
 </div>
 
 <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
-<script type='text/javascript' src='<?php echo $this->themeurl;?>/js/small-menu.js'></script>
-<script type='text/javascript' src='<?php echo $this->themeurl;?>/js/jquery.cookie.js'></script>
-<script type='text/javascript' src='<?php echo $this->themeurl;?>/js/script.js'></script>
+<script type='text/javascript' src='<?php echo $self->themeurl;?>/js/small-menu.js'></script>
+<script type='text/javascript' src='<?php echo $self->themeurl;?>/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='<?php echo $self->themeurl;?>/js/script.js'></script>

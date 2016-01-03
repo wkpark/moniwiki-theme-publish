@@ -1,5 +1,5 @@
 <?php /* MoniWiki Theme by wkpark at kldp.org */
-if($this->_doctype_notify != 1 && substr($DBInfo->doctype,0,21) == '<!DOCTYPE html PUBLIC'){
+if($self->_doctype_notify != 1 && substr($DBInfo->doctype,0,21) == '<!DOCTYPE html PUBLIC'){
 ?>
 <div class='notify'>
 <h1>Setup almost done... 설정이 거의 완료되었습니다.</h1>
@@ -19,13 +19,13 @@ doctype;
 
 if (!empty($DBInfo->use_scrap))
 include_once("plugin/scrap.php");
-if (!empty($this->_no_urlicons))
+if (!empty($self->_no_urlicons))
 echo <<<EOF
 <style type='text/css'>
 img.url { /* display: none; /* */ }
 
 a.externalLink.unnamed {
-background: url($this->themeurl/imgs/http.png) no-repeat 0 center;
+background: url($self->themeurl/imgs/http.png) no-repeat 0 center;
 padding: 0 0 0 14px;
 opacity: .8;
 filter: alpha(opacity=80);
@@ -33,7 +33,7 @@ filter: alpha(opacity=80);
 
 a.externalLink.unnamed[target="_blank"]:after {
 content: "";
-background: url($this->themeurl/imgs/external.png) no-repeat 0 center;
+background: url($self->themeurl/imgs/external.png) no-repeat 0 center;
 display: inline-block;
 width: 14px;
 height: 14px;
@@ -54,8 +54,8 @@ EOF;
 </a>
 <hgroup>
 <h1 class="site-title"><a href="<?php echo $DBInfo->url_prefix;?>/wiki.php" rel="home"><?php echo $DBInfo->sitename;?></a> <?php echo $rss_icon;?></h1>
-<?php if(isset($this->_site_description)){?>
-<h2 class="site-description"><?php echo $this->_site_description;?></h2>
+<?php if(isset($self->_site_description)){?>
+<h2 class="site-description"><?php echo $self->_site_description;?></h2>
 <?php }?>
 </hgroup>
 
@@ -115,12 +115,12 @@ echo $menu;?>
                     <?php echo $subindex;?>
                     <?php
                     if (empty($options['action']) and !empty($DBInfo->use_scrap)) {
-                        $scrap = macro_Scrap($this, 'js');
+                        $scrap = macro_Scrap($self, 'js');
                         if (!empty($scrap)) {
                             echo "<div id='scrap'>";
                             echo $scrap;
                             echo "</div>";
-                            $js = $this->get_javascripts();
+                            $js = $self->get_javascripts();
                             if ($js) {
                                 echo $js;
                             }
